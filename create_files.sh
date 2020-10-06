@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z "$1" ]; then echo "Enter directory name, number of files, programming language""; exit 1; fi
+if [ -z "$1" ]; then echo "Enter directory name, number of files, programming language"; exit 1; fi
 if [ -z "$2" ]; then echo "Enter number of files, programming language"; exit 1; fi
 if [ -z "$3" ]; then echo "Enter programming language"; exit 1; fi
 echo "Creating directory with $1"; cd $PWD; rm -r $1 > /dev/null 2>&1; mkdir $1; cd $1

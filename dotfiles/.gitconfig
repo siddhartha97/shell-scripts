@@ -1,0 +1,16 @@
+[user]
+	email = firstnamelastname@gmail.com
+[alias]
+    # Requires a parameter
+    cb = checkout -b # Checkout a new branch
+    addup = remote add upstream  # adds remote upstream
+    pr = !git checkout $(git fetch upstream pull/$1/head:$1) # fetch upstream PR and checkout 
+    which = !git branch | grep -i # greps all branch starting with the given param
+
+    # Does not require a parameter 
+    lg = log --graph --oneline --decorate # pretty log
+    up = !git fetch upstream && git rebase upstream/master # Update the branch
+    send = !git push origin $(git branch --show-current) # Push a new branch 
+    sendf = !git push origin $(git branch --show-current) -f  # Force push a new branch
+    
+    
